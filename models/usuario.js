@@ -4,9 +4,11 @@ var mongoose = require('mongoose'),
 var usuarioSchema = new Schema({
 
     nombre: {type: String},
+    email: {type: String},
+    dni: {type: String},
     usuario: { type: String},
     password: { type: String},
-    credito: {type: Number, default: 0}
+    credito: {type: Number, default: 10000}
 
 });
 // export

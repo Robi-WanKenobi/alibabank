@@ -10,6 +10,7 @@ router.post('/', function (req, res) {
 
     var admin = new User();
     var params = req.body;
+    admin = params;
 
     if(params.usuario && params.password){
         admin.usuario = params.usuario;
@@ -48,5 +49,13 @@ router.post('/login', function(req, res) {
                 res.status(404).send({message: 'Usuario incorrecto'});
             }
         }
+    });
+});
+
+router.get('/:id', function(req, res, next) {
+    console.log(req.params.id);
+    User.findById(req.params.id).exec(function (err, user) {
+        if (err) return next(err);
+        res.json(user);
     });
 });
