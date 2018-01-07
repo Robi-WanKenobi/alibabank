@@ -59,3 +59,11 @@ router.get('/:id', function(req, res, next) {
         res.json(user);
     });
 });
+
+router.put('/credito/:id', function(req, res, next) {
+    console.log(req.params.id);
+    User.findByIdAndUpdate(req.params.id, { $set: { 'credito': req.body.credito} }).exec(function (err, user) {
+        if (err) return next(err);
+        res.json(user);
+    });
+});

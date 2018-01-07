@@ -24,6 +24,8 @@
     "nodemon": "^1.12.1",
     "object-hash": "^1.2.0",
     "secrets.js": "^0.1.8",
-    "serve-favicon": "^2.4.5"
+    "serve-favicon": "^2.4.5",
+    "sync": "^0.2.5",
+    "wait-until": "0.0.2"
   }
 }
